@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Fees Payment - EMS</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">EMS</div>
+    <ul class="nav-links">
+        <li><a th:href="@{/index}">Home</a></li>
+        <li><a th:href="@{/courses}">Courses</a></li>
+        <li><a th:href="@{/about}">About</a></li>
+        <li><a th:href="@{/contact}">Contact</a></li>
+        <li><a th:href="@{/login}" class="login-btn">Login</a></li>
+    </ul>
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</nav>
+
+<div class="hero-section payment-hero">
+    <div class="overlay">
+        <h1>Enrollment Fees Payment</h1>
+    </div>
+</div>
+
+<section class="content-section">
+    <div class="payment-content">
+        <h2>Payment Details</h2>
+        <p>Please enter your payment details below to proceed with the enrollment fees payment.</p>
+        </br>
+        <form action="#" method="post" class="payment-form">
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card-number" placeholder="Enter a card number" required>
+            </div>
+            <div class="form-group">
+                <label for="card-holder">Card Holder Name</label>
+                <input type="text" id="card-holder" name="card-holder" placeholder="Enter a name" required>
+            </div>
+            <div class="form-group">
+                <label for="card-holder">Course Name</label>
+                <input type="text" id="card-holder" name="card-holder" placeholder="Enter a course" required>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="expiry-date">Expiry Date</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="Enter a date" required>
+                    </div>
+                    <div class="col">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="Enter a cvv number" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Pay Now</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2024 EMS. All rights reserved.</p>
+</footer>
+
+<script>
+    // JavaScript to handle the hamburger menu
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+</body>
+</html>

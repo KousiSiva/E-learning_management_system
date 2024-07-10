@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COURSE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">EMS</div>
+    <ul class="nav-links">
+        <li><a th:href="@{/index}">Home</a></li>
+        <li><a th:href="@{/courses}">Courses</a></li>
+        <li><a th:href="@{/about}">About</a></li>
+        <li><a th:href="@{/contact}">Contact</a></li>
+        <li><a th:href="@{/login}" class="login-btn">Login</a></li>
+    </ul>
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</nav>
+
+<header>
+    <h1>Introduction to Programming Languages Course</h1>
+</header>
+<div class="container">
+    <section class="course-section">
+        <h2 class="course-title">Course Overview</h2>
+        <p class="course-description">This course explores various programming languages, their syntax, applications, and differences. Gain insights into the world of coding and understand how programming languages shape modern technology.</p>
+    </section>
+    <section class="course-section">
+        <div class="programming-language" style="background-image: url('https://images.pexels.com/photos/4218883/pexels-photo-4218883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+            <h3>JavaScript</h3>
+            <p>JavaScript is a scripting language used to develop web pages. Developed in Netscape, JS allows developers to create a dynamic and interactive web page to interact with visitors and execute complex actions. It also enables users to load content into a document without reloading the entire page.</p>
+        </div>
+        <div class="form-group">
+            <a th:href="@{/enrollment}"><button type="submit">Enroll Now</button></a>
+        </div>
+        <div class="programming-language" style="background-image: url('https://www.besanttechnologies.com/wp-content/uploads/2018/11/what-is-python-programming.jpg');">
+            <h3>Python</h3>
+            <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured, object-oriented, and functional programming.</p>
+        </div>
+        <div class="form-group">
+            <a th:href="@{/enrollment}"><button type="submit">Enroll Now</button></a>
+        </div>
+        <div class="programming-language" style="background-image: url('https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+            <h3>Java</h3>
+            <p>Java is a widely-used programming language for coding web applications. It has been a popular choice among developers for over two decades, with millions of Java applications in use today. Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself.</p>
+        </div>
+        <div class="form-group">
+            <a th:href="@{/enrollment}"><button type="submit">Enroll Now</button></a>
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2024 EMS. All rights reserved.</p>
+</footer>
+
+<script>
+    // JavaScript to handle the hamburger menu
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+</body>
+</html>
